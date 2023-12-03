@@ -1,0 +1,31 @@
+{
+  "General": {
+    "-PIDFile": "/tmp/tsdcuk-engine-1.pid"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.Hosting.Lifetime": "Information",
+      "TSDuckEngine.Services.Engine": "Debug",
+      "TSDuckEngine.Services.MetricProcessor": "Debug"
+    }
+  },
+  "OpenTelemetry": {
+    "OtlpExporter": {
+      "Endpoint": "http://172.22.75.142:4317",
+      "Protocol": "grpc"
+    }
+  },
+  "Engine": {
+    "Tsp": {
+      "Realtime": true,
+      "SynchronousLoging": true,
+      "ResourceMonitoring": true,
+      "ContinuityMonitoring": true,
+      "BitrateMonitoring": true,
+      "Analyzing": true
+    },
+    "Input": "srt://0.0.0.0:9000?mode=listener",
+    "-Output": "udp://239.45.45.1:1234?local-address=172.22.75.216"
+  }
+}

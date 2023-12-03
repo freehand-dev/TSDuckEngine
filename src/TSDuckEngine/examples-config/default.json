@@ -1,0 +1,19 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.Hosting.Lifetime": "Information",
+      "TSDuckEngine.Services.Engine": "Debug",
+    }
+  },
+  "OpenTelemetry": {
+    "OtlpExporter": {
+      "Endpoint": "http://127.0.0.1:4317",
+      "Protocol": "grpc"
+    }
+  },
+  "Engine": {
+    "Input": "srt://127.0.0.0:9002?mode=caller&StreamId=test&statistics-interval=1000&passphrase=es%40dmin1.",
+    "Output": "udp://239.45.45.45:1234?localaddr=172.22.78.201&fifo_size=278876&overrun_nonfatal=1&timeout=5000000"
+  }
+}

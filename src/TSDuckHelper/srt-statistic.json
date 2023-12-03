@@ -1,0 +1,35 @@
+{
+  "global": { "instant": { "rtt-ms": 9 } },
+  "receive": {
+    "instant": { "delivery-delay-ms": 120 },
+    "interval": {
+      "bytes": 1815600,
+      "dropped-packets": 0,
+      "lost-packets": 0,
+      "packets": 1335
+    },
+    "total": {
+      "bytes": 19895440,
+      "dropped-packets": 0,
+      "lost-packets": 0,
+      "packets": 14629
+    }
+  },
+  "send": {
+    "instant": { "delivery-delay-ms": 0 },
+    "interval": {
+      "bytes": 0,
+      "dropped-packets": 0,
+      "lost-packets": 0,
+      "packets": 0,
+      "retransmit-packets": 0
+    },
+    "total": {
+      "bytes": 0,
+      "dropped-packets": 0,
+      "lost-packets": 0,
+      "packets": 0,
+      "retransmit-packets": 0
+    }
+  }
+}
