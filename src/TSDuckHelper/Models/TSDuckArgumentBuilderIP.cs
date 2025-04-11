@@ -18,7 +18,7 @@ namespace TSDuckHelper.Models
         /// address which can be either unicast or multicast.It can be also a host name that translates to an IP
         /// address.
         /// </summary>
-        public IPAddress Address { get; set; }
+        public string Address { get; set; }
 
         /// <summary>
         /// The port specifies the destination UDP port.
@@ -68,7 +68,7 @@ namespace TSDuckHelper.Models
 
         }
 
-        public TSDuckArgumentBuilderIP(IPAddress address, int port)
+        public TSDuckArgumentBuilderIP(string address, int port)
         {
             Address = address;
             Port = port;
@@ -108,7 +108,7 @@ namespace TSDuckHelper.Models
         {
             var result = new TSDuckArgumentBuilderIP()
             {
-                Address = IPAddress.Parse(address),
+                Address = address,
                 Port = port,
                 TTL = 1,
                 PacketBurst = 7,

@@ -92,7 +92,7 @@ namespace TSDuckHelper
 
         public static T GetFromQueryString<T>(Uri uri) where T : new()
         {
-            Dictionary<string, string> QueryString = !string.IsNullOrEmpty(uri.Query) ? uri.Query.TrimStart('?').ToLower().Split('&').ToDictionary(x => x.Split('=')[0], x => x.Split('=')[1]) ?? new() : new();
+            Dictionary<string, string> QueryString = !string.IsNullOrEmpty(uri.Query) ? uri.Query.TrimStart('?').Split('&').ToDictionary(x => x.Split('=')[0], x => x.Split('=')[1]) ?? new() : new();
 
             var obj = new T();
             var properties = typeof(T).GetProperties();
@@ -118,7 +118,7 @@ namespace TSDuckHelper
                 object? value = null; 
                 if (propertyName.Equals("address", StringComparison.OrdinalIgnoreCase))
                 {
-                    value = IPAddress.Parse(uri.Host);
+                    value = uri.Host;
                 }
                 else if (propertyName.Equals("port", StringComparison.OrdinalIgnoreCase))
                 {

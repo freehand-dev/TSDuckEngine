@@ -50,7 +50,7 @@ namespace TSDuckHelper.Models
         /// <summary>
         /// 
         /// </summary>
-        public IPAddress Address { get; set; } = IPAddress.Parse("0.0.0.0");
+        public string Address { get; set; } = "localhost";
 
         /// <summary>
         /// 
@@ -153,7 +153,7 @@ namespace TSDuckHelper.Models
 
         }
 
-        public TSDuckArgumentBuilderSRT(IPAddress address, int port, SrtMode mode = SrtMode.Listener)
+        public TSDuckArgumentBuilderSRT(string address, int port, SrtMode mode = SrtMode.Listener)
         {
             Address = address;
             Port = port;
